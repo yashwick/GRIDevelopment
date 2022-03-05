@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GRIDevelopment.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220304092817_creating first two tables1")]
-    partial class creatingfirsttwotables1
+    [Migration("20220305141800_creating first 2 tables")]
+    partial class creatingfirst2tables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace GRIDevelopment.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("GRIDevelopment.Models.product", b =>
+            modelBuilder.Entity("GRIDevelopment.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
@@ -72,7 +72,7 @@ namespace GRIDevelopment.Migrations
                     b.ToTable("product_attributes");
                 });
 
-            modelBuilder.Entity("GRIDevelopment.Models.product", b =>
+            modelBuilder.Entity("GRIDevelopment.Models.Product", b =>
                 {
                     b.HasOne("GRIDevelopment.Models.ProductAttribute", "ProductAttribute")
                         .WithMany()

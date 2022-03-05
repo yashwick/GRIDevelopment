@@ -36,16 +36,27 @@ namespace GRIDevelopment.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_products", x => x.ProductId);
+                    table.ForeignKey(
+                        name: "FK_products_product_attributes_AttributeIdFK",
+                        column: x => x.AttributeIdFK,
+                        principalTable: "product_attributes",
+                        principalColumn: "AttributeId",
+                        onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_products_AttributeIdFK",
+                table: "products",
+                column: "AttributeIdFK");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "product_attributes");
+                name: "products");
 
             migrationBuilder.DropTable(
-                name: "products");
+                name: "product_attributes");
         }
     }
 }

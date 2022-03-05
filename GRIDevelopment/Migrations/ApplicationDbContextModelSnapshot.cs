@@ -22,7 +22,7 @@ namespace GRIDevelopment.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("GRIDevelopment.Models.product", b =>
+            modelBuilder.Entity("GRIDevelopment.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
@@ -70,7 +70,7 @@ namespace GRIDevelopment.Migrations
                     b.ToTable("product_attributes");
                 });
 
-            modelBuilder.Entity("GRIDevelopment.Models.product", b =>
+            modelBuilder.Entity("GRIDevelopment.Models.Product", b =>
                 {
                     b.HasOne("GRIDevelopment.Models.ProductAttribute", "ProductAttribute")
                         .WithMany()
