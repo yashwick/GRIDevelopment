@@ -17,5 +17,7 @@ namespace GRIDevelopment.Controllers
             IEnumerable<Product> objCategoryList = _db.products.ToList();
             return View(objCategoryList);
         }
+
+
     }
 }

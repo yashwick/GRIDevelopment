@@ -3,13 +3,17 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>product Index</h1>
+<h1 class="pb-4">product Index</h1>
 
-<table class="table table-bordered table-striped" style="width:100%">
+<table class="table table-bordered table-striped " style="width:100%">
     <thead>
         <tr>
-            <th>Product Name</th>
-            @*<th>key</th>*@
+            <th>Application</th>
+            <th>Rim Size</th>
+            <th>Tyre Size</th>
+            <th>Pattern</th>
+            <th>Price</th>
+            <th>Quantity</th>
         </tr>
     </thead>
 
@@ -19,12 +23,12 @@
     {
         <tr>
             
-            <td width="50%">
-                @item.ProductName
-            </td>
-            @*<td>
-                @item.ProductAttribute.Value
-            </td>*@
+            <td>@item.Application</td>
+            <td>@item.Rim_Size</td>
+            <td>@item.Tire_Size</td>
+            <td>@item.Pattern</td>
+            <td>@item.Price</td>
+            <td>@item.Quantity</td>
         </tr>
         
     }

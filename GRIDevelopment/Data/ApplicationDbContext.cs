@@ -11,6 +11,6 @@ namespace GRIDevelopment.Data
         }
 
         public DbSet<Product> products { get; set; }
-        public DbSet<ProductAttribute> product_attributes { get; set; }  
+        
     }
 }
