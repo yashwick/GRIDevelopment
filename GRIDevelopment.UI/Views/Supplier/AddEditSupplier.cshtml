@@ -1,0 +1,56 @@
+﻿@model GRIDevelopment.Contract.DTO.SupplierDTO
+
+@{
+    ViewData["Title"] = "AddEditSupplier";
+}
+
+@if(Model != null && Model.Id > 0)
+{
+    <h1>Edit Supplier</h1>
+} else
+{
+    <h1>Add Supplier</h1>
+}
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddEditSupplier">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                      
+@*            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>*@
+
+            <div class="form-group">
+                <label asp-for="SupplierName" class="control-label"></label>
+                <input asp-for="SupplierName" class="form-control" />
+                <span asp-validation-for="SupplierName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupAddress" class="control-label"></label>
+                <input asp-for="SupAddress" class="form-control" />
+                <span asp-validation-for="SupAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupContact" class="control-label"></label>
+                <input asp-for="SupContact" class="form-control" />
+                <span asp-validation-for="SupContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.22">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GRIDevelopment.BL\GRIDevelopment.BL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="API\" />
+    <Folder Include="controller\" />
+  </ItemGroup>
+
+</Project>
