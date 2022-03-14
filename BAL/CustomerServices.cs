@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BAL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace BAL
 {
-    public class CustomerServices:ICustomerServices
+    public class CustomerServices
     {
-        private readonly Context _context;
-        private readonly 
     }
 }

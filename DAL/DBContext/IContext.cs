@@ -8,6 +8,6 @@ namespace DAL.DBContext
 {
     public interface  IContext
     {
-        DBSet<Customer> Customers { get; set; }
+       // DBSet<Customer> Customers { get; set; }
     }
 }

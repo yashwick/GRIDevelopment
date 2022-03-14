@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contract", "Contract\Contract.csproj", "{32F0514A-44C9-4E2B-8FAA-6715FA552296}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mapper", "Mapper\Mapper.csproj", "{6F0F637C-E8C1-40B9-AC09-733208DC74A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{32F0514A-44C9-4E2B-8FAA-6715FA552296}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32F0514A-44C9-4E2B-8FAA-6715FA552296}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32F0514A-44C9-4E2B-8FAA-6715FA552296}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F0F637C-E8C1-40B9-AC09-733208DC74A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0F637C-E8C1-40B9-AC09-733208DC74A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0F637C-E8C1-40B9-AC09-733208DC74A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0F637C-E8C1-40B9-AC09-733208DC74A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
