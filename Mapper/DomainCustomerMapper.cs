@@ -18,7 +18,7 @@ namespace Mapper
         {
             return _mapper.Map<CustomerDTO, Customer>(customer);
         }
-        public List<CustomerDTO> TocustomerDTOs(List<Customer> customers)
+        public List<CustomerDTO> ToCustomerDTOs(List<Customer> customers)
         {
             return _mapper.Map<List<Customer>, List<CustomerDTO>>(customers);
         }

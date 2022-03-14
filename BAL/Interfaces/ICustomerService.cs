@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BAL.Interfaces
 {
-    public interface ICustomerServices
+    public interface ICustomerService
     {
         void AddCustomer(CustomerDTO customer);
         void UpdatePost(CustomerDTO customer);

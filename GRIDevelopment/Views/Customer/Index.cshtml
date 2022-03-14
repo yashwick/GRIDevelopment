@@ -1,1 +1,49 @@
-﻿
+﻿@{
+	ViewData["Title"]= "Index";
+}
+
+<h2>INDEX</h2>
+<p>
+	@Html.ActionLink("Add New","AddEditCustomer")
+</p>
+
+<table class="customer_details">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Id)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.customer_name)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.customer_address)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.customer_contact)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.customer_email)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				@Html.DisplayNameFor(model => model.Id)
+			</td>
+			<td>
+				@Html.DisplayNameFor(model => model.customer_name)
+			</td>
+			<td>
+				@Html.DisplayNameFor(model => model.customer_address)
+		    </td>
+			<td>
+				@Html.DisplayNameFor(model => model.customer_contact)
+		    </td>
+			<td>
+				@Html.DisplayNameFor(model => model.customer_email)
+			</td>
+		</tr>
+	</tbody>
+</table>

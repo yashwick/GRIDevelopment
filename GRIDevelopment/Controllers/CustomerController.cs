@@ -17,7 +17,7 @@ namespace GRIDevelopment.Controllers
 
         public IActionResult Index()
         {
-            var customers = _customerServices.GetAllCustomers();
+            var customers = _customerService.GetAllCustomers();
             return View(customers);
         }
         [HttpGet]
