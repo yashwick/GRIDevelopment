@@ -34,7 +34,7 @@ namespace BAL
         {
             var customerEntity = _context.Customers.FirstOrDefault(x => x.Id == customer.Id);
 
-            if (customerEntity == null)
+            if (customerEntity != null)
             {
                 customerEntity.customer_name = customer.customer_name;
                 customerEntity.customer_address = customer.customer_address;
