@@ -13,6 +13,12 @@ namespace GRIDevelopment.Mpper
         {
             CreateMap<SupplierDTO, Supplier>();
             CreateMap<Supplier, SupplierDTO>();
+
+            CreateMap<CustomerDTO, Customer>();
+            CreateMap<Customer, CustomerDTO>();
+
+            CreateMap<ProductDTO, Product>();
+            CreateMap<Product, ProductDTO>();
         }
     }
 }

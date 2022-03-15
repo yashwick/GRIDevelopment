@@ -1,0 +1,130 @@
+﻿@model GRIDevelopment.Contract.DTO.ProductDTO
+
+@{
+    ViewData["Title"] = "AddEditProduct";
+}
+
+@if(Model != null && Model.Id > 0)
+{
+    <h1>Edit Product</h1>
+} else
+{
+    <h1>Add Product</h1>
+}
+
+<head><style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  background-color: lightblue;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+
+}
+
+div {
+  
+  background-color: #f2f2f2;
+  
+}
+</style></head>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddEditProduct">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @*<div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div> *@
+
+            <div class="form-group">
+                <label asp-for="ProductName" class="control-label"></label>
+                <input asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductDescription" class="control-label"></label>
+                <input asp-for="ProductDescription" class="form-control" />
+                <span asp-validation-for="ProductDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Application" class="control-label"></label>
+
+                <select asp-for="Application" class="form-control">
+                    <option>--Select--</option>
+                    <option>Irrigation</option>
+                    <option>Raw Crop</option>
+                    <option>Loaders</option>
+                    <option>Mining</option>
+                    <option>Multi Purpose</option>
+                </select>
+                <span asp-validation-for="Application" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="RimSize" class="control-label"></label>
+
+                <select asp-for="RimSize" class="form-control">
+                    <option>--Select--</option>
+                    <option>10</option>
+                    <option>12</option>
+                    <option>14</option>
+                    <option>17</option>
+                    <option>18e</option>
+                    </select>
+
+
+                <span asp-validation-for="RimSize" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TubeSize" class="control-label"></label>
+
+                <select asp-for="TubeSize" class="form-control">
+                    <option>--Select--</option>
+                    <option>10-16.5</option>
+                    <option>11.00-16</option>
+                    <option>11L-15</option>
+                    <option>20.8-38</option>
+                    <option>400/60-15.5</option>
+                    </select>
+
+                <span asp-validation-for="TubeSize" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Go to List</a>
+</div>
+

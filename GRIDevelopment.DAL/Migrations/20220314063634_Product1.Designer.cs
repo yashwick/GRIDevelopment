@@ -4,14 +4,16 @@ using GRIDevelopment.DAL.DBContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GRIDevelopment.DAL.Migrations
 {
     [DbContext(typeof(GRIContext))]
-    partial class GRIContextModelSnapshot : ModelSnapshot
+    [Migration("20220314063634_Product1")]
+    partial class Product1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

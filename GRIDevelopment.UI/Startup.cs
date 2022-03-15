@@ -32,6 +32,7 @@ namespace GRIDevelopment.UI
             services.AddDbContextPool<GRIContext>(
                 options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+
             services.AddControllersWithViews();
 
             var mappingConfig = new MapperConfiguration(mc =>
@@ -43,8 +44,12 @@ namespace GRIDevelopment.UI
 
             services.AddSingleton(mapper);
             services.AddSingleton<DomainDTOMapper>();
+            services.AddSingleton<DomainCusDTOMapper>();
+            services.AddSingleton<DomainProDTOMapper>();
 
             services.AddScoped<ISupplierService, SupplierService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IProductService, ProductService>();
             services.AddMvc();
         }
 
@@ -73,9 +78,10 @@ namespace GRIDevelopment.UI
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Supplier}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
 
+            app.UseAuthentication();
          
         }
     }

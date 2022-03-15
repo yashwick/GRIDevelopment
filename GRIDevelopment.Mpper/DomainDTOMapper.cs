@@ -29,5 +29,8 @@ namespace GRIDevelopment.Mpper
         {
             return _mapper.Map<Supplier, SupplierDTO>(supplier);
         }
+
+
+
     }
 }

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<GRIDevelopment.Contract.DTO.ProductDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+     @Html.ActionLink("Add New", "AddEditProduct")
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Application)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RimSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TubeSize)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Application)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RimSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TubeSize)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "AddEditProduct", new {  id=item.Id  }) |
+                @Html.ActionLink("Delete", "Remove", new {  id=item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

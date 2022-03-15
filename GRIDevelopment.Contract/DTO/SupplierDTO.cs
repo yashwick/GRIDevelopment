@@ -13,6 +13,7 @@ namespace GRIDevelopment.Contract.DTO
         public string SupAddress { get; set; }
 
         [StringLength(10,ErrorMessage = "Must be a valid contact number",MinimumLength = 10)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string SupContact { get; set; }
     }
 }

@@ -4,14 +4,16 @@ using GRIDevelopment.DAL.DBContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GRIDevelopment.DAL.Migrations
 {
     [DbContext(typeof(GRIContext))]
-    partial class GRIContextModelSnapshot : ModelSnapshot
+    [Migration("20220314042152_Product")]
+    partial class Product
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,10 +71,14 @@ namespace GRIDevelopment.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RimSize")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(10)")
+                        .HasMaxLength(10);
 
                     b.Property<string>("TubeSize")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(10)")
+                        .HasMaxLength(10);
 
                     b.HasKey("Id");
 

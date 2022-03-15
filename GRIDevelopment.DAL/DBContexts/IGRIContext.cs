@@ -9,5 +9,7 @@ namespace GRIDevelopment.DAL.DBContexts
     public interface IGRIContext
     {
         DbSet<Supplier> Suppliers { get; set; }
+        DbSet<Customer> Customers { get; set; }
+        DbSet<Product> Products { get; set; }
     }
 }
