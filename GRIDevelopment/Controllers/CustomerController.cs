@@ -15,11 +15,11 @@ namespace GRIDevelopment.Controllers
             _customerService = customerService;
         }
 
-        //public IActionResult Index()
-        //{
-        //    var customers = _customerService.GetAllCustomers();
-        //    return View(customers);
-        //}
+        public IActionResult Index()
+        {
+            var customers = _customerService.GetAllCustomers();
+            return View(customers);
+        }
         [HttpGet]
         public IActionResult AddEditCustomer(int id)
         {
@@ -31,23 +31,27 @@ namespace GRIDevelopment.Controllers
                 return View(customer);
             }
         }
-        //[HttpPost]
-        //public IActionResult AddEditCustomer(CustomerDTO customer)
-        //{
-        //    //if(!ModelState.IsValid)
-        //    //    return View();
 
-        //    ////if (customer.Id > 0)
-        //    ////{
-        //    ////    _customerService.UpdateCustomer(customer);
-        //    ////}
-        //    ////else
-        //    ////{
-        //    ////    _customerService.AddCustomer(customer);
-        //    ////}
-        //    //return RedirectToAction("Index");
-        //}
+        //
+        [HttpPost]
+        public IActionResult AddEditCustomer(CustomerDTO customer)
+        {
+            if (!ModelState.IsValid)
+                return View();
 
+            if (customer.Id > 0)
+            {
+                _customerService.UpdatePost(customer);
+            }
+            else
+            {
+                _customerService.AddCustomer(customer);
+            }
+            return RedirectToAction("Index");
+        }
+
+
+        //Delete a customer
         [HttpGet]
         public IActionResult Remove(int id)
         {

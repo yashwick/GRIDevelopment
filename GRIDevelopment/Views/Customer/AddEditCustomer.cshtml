@@ -22,12 +22,7 @@ else
         <form asp-action="AddEditCustomer">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-             <div class="form-group">
-                <label asp-for="CustomerId" class="control-label"></label>
-                <input asp-for="CustomerId" class="form-control" />
-                <span asp-validation-for="CustomerId" class="text-danger"></span>
-            </div>
-
+            
             <div class="form-group">
                 <label asp-for="customer_name" class="control-label"></label>
                 <input asp-for="customer_name" class="form-control" />
@@ -49,7 +44,7 @@ else
                 <span asp-validation-for="customer_email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-secondary" />
             </div>
         </form>
     </div>

@@ -5,26 +5,29 @@
 
 <h2>INDEX</h2>
 <p>
-	@Html.ActionLink("Add New","AddEditCustomer")
+	@Html.ActionLink("Add New Customer","AddEditCustomer")
 </p>
 
-<table class="customer_details">
-	<thead>
+<table id="customer_details_table" class="customer_details_table">
+	<thead class="headings">
 		<tr>
 			<th>
-				@Html.DisplayNameFor(model => model.Id)
+				ID
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.customer_name)
+				Name
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.customer_address)
+				Address
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.customer_contact)
+				Contact
 			</th>
 			<th>
-				@Html.DisplayNameFor(model => model.customer_email)
+				Email
+			</th>
+			<th>
+
 			</th>
 		</tr>
 	</thead>
@@ -32,19 +35,19 @@
 @foreach (var item in Model){
 		<tr>
 			<td>
-				@Html.DisplayNameFor(model => model.Id)
+				@item.Id
 			</td>
 			<td>
-				@Html.DisplayNameFor(model => model.customer_name)
+				@item.customer_name
 			</td>
 			<td>
-				@Html.DisplayNameFor(model => model.customer_address)
+				@item.customer_address
 		    </td>
 			<td>
-				@Html.DisplayNameFor(model => model.customer_contact)
+				@item.customer_contact
 		    </td>
 			<td>
-				@Html.DisplayNameFor(model => model.customer_email)
+				@item.customer_email
 			</td>
 			<td>
                 @Html.ActionLink("Edit", "AddEditCustomer", new { id=item.Id  }) |

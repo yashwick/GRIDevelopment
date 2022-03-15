@@ -23,7 +23,7 @@ namespace BAL
         }
         public CustomerDTO GetCustomerById(int id)
         {
-            return _mapper.ToCustomerDTO(_context.Customers, FirstOrDefault(x => x.Id == id));
+            return _mapper.ToCustomerDTO( _context.Customers.FirstOrDefault(x => x.Id == id));
         }
         public void AddCustomer(CustomerDTO customer)
         {

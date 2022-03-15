@@ -16,3 +16,20 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.customer_details_table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customer_details_table tr:hover {
+    background-color: #ddd;
+}
+.headings {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: darkblue;
+    color: white;
+}
