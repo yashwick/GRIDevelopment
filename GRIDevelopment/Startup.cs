@@ -1,14 +1,9 @@
 ﻿using AutoMapper;
 using Mapper;
 using Microsoft.EntityFrameworkCore;
-using DAL;
-//using BAL.Interface;
 using DAL.DBContext;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using BAL.Interfaces;
+using BAL;
 
 namespace GRIDevelopment
 {
@@ -37,12 +32,12 @@ namespace GRIDevelopment
 
             IMapper mapper = mappingConfig.CreateMapper();
 
-            //services.AddSingleton(mapper);
-            //services.AddSingleton<DomainCustomerMapper>();
+            services.AddSingleton(mapper);
+            services.AddSingleton<DomainCustomerMapper>();
 
-            
-            //services.AddScoped<ICustomerService, CustomerService>();
-            //services.AddMvc();
+
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

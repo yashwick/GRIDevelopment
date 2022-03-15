@@ -12,7 +12,7 @@ namespace BAL.Interfaces
         void AddCustomer(CustomerDTO customer);
         void UpdatePost(CustomerDTO customer);
 
-        List<CustomerDTO> GetCustomers();
+        List<CustomerDTO> GetAllCustomers();
         CustomerDTO GetCustomerById(int id);
         void RemovePost(int id);
     }

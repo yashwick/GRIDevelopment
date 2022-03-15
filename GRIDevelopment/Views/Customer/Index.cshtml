@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Contract.DTO.CustomerDTO>
+@{
 	ViewData["Title"]= "Index";
 }
 
@@ -7,7 +8,7 @@
 	@Html.ActionLink("Add New","AddEditCustomer")
 </p>
 
-@*<table class="customer_details">
+<table class="customer_details">
 	<thead>
 		<tr>
 			<th>
@@ -28,6 +29,7 @@
 		</tr>
 	</thead>
 	<tbody>
+@foreach (var item in Model){
 		<tr>
 			<td>
 				@Html.DisplayNameFor(model => model.Id)
@@ -44,6 +46,11 @@
 			<td>
 				@Html.DisplayNameFor(model => model.customer_email)
 			</td>
+			<td>
+                @Html.ActionLink("Edit", "AddEditCustomer", new { id=item.Id  }) |
+                @Html.ActionLink("Delete", "Remove", new { id=item.Id  })
+            </td>
 		</tr>
+}
 	</tbody>
-</table>*@
+</table>

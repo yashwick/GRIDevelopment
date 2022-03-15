@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Contract.DTO;
+using DAL.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +11,10 @@ namespace Mapper
 {
     public class AutoMapperConfig : Profile
     {
-        //public AutoMapperConfig()
-        //{
-        //    CreateMap<CustomerDTO, Customer>();
-        //    CreateMap<Customer, CustomerDTO>();
-        //}
+        public AutoMapperConfig()
+        {
+            CreateMap<CustomerDTO, Customer>();
+            CreateMap<Customer, CustomerDTO>();
+        }
     }
 }
