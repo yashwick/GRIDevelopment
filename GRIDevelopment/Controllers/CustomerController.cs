@@ -10,16 +10,16 @@ namespace GRIDevelopment.Controllers
     public class CustomerController : Controller
     {
         private readonly ICustomerService _customerService;
-        public CustomerController(ICustomerService customerService, DomainCustomerMapper mapper)
-        { 
-            _customerService = customerService;
-        } 
+        //public CustomerController(ICustomerService customerService, DomainCustomerMapper mapper)
+        //{ 
+        //    _customerService = customerService;
+        //} 
 
-        public IActionResult Index()
-        {
-            var customers = _customerService.GetAllCustomers();
-            return View(customers);
-        }
+        //public IActionResult Index()
+        //{
+           // var customers = _customerService.GetAllCustomers();
+            //return View(customers);
+        //}
         [HttpGet]
         public IActionResult AddEditCustomer(int id)
         {
@@ -37,14 +37,14 @@ namespace GRIDevelopment.Controllers
             if(!ModelState.IsValid)
                 return View();
 
-            if (customer.Id > 0)
-            {
-                _customerService.UpdateCustomer(customer);
-            }
-            else 
-            {
-                _customerService.AddCustomer(customer);
-            }
+            //if (customer.Id > 0)
+            //{
+            //    _customerService.UpdateCustomer(customer);
+            //}
+            //else 
+            //{
+            //    _customerService.AddCustomer(customer);
+            //}
             return RedirectToAction("Index");
         }
 

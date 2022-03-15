@@ -9,10 +9,10 @@ namespace Mapper
 {
     public class AutoMapperConfig : Profile
     {
-        public AutoMapperConfig()
-        {
-            CreateMap<CustomerDTO, Customer>();
-            CreateMap<Customer, CustomerDTO>();
-        }
+        //public AutoMapperConfig()
+        //{
+        //    CreateMap<CustomerDTO, Customer>();
+        //    CreateMap<Customer, CustomerDTO>();
+        //}
     }
 }

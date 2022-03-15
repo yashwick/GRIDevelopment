@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAL.Model;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,6 @@ namespace DAL.DBContext
 {
     public interface  IContext
     {
-        DBSet<Customer> Customers { get; set; }
+        DbSet<Customer> Customers { get; set; }
     }
 }
