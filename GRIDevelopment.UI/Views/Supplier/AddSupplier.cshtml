@@ -1,0 +1,44 @@
+﻿@model GRIDevelopment.Contract.DTO.SupplierDTO
+
+@{
+    ViewData["Title"] = "AddSupplier";
+}
+
+<h1>AddSupplier</h1>
+
+<h4>SupplierDTO</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddSupplier">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SupplierName" class="control-label"></label>
+                <input asp-for="SupplierName" class="form-control" />
+                <span asp-validation-for="SupplierName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupAddress" class="control-label"></label>
+                <input asp-for="SupAddress" class="form-control" />
+                <span asp-validation-for="SupAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupContact" class="control-label"></label>
+                <input asp-for="SupContact" class="form-control" />
+                <span asp-validation-for="SupContact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-controller="Home" asp-action="Edit">Edit</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

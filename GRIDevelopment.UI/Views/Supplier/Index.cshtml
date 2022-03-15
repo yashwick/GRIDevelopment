@@ -1,0 +1,52 @@
+﻿@model IEnumerable<GRIDevelopment.Contract.DTO.SupplierDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Supplier List</h1>
+
+<p>
+     @Html.ActionLink("Add New", "AddEditSupplier")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupplierName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupContact)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupContact)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "AddEditSupplier", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Remove", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
